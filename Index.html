@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation - mithun & chetana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+
+:root {
+    --gold: #d4af37;
+    --dark-gold: #b8860b;
+    --text-color: #333;
+    --royal-purple: #6A0DAD;
+    --deep-berry: #FAF9F6;
+    --mgold: #DB7093;
+    --white: #F8F6F0;
+}
+
+body {
+    background: linear-gradient(135deg, #0A1F44, #1a2f6c);
+    color: var(--deep-berry);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 92%;
+    padding: 50px 20px;
+}
+
+/* TITLE */
+h1.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: var(--gold);
+    margin-bottom: 50px;
+}
+
+/* MESSAGE */
+.message {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.6rem;
+    margin: 30px 0;
+}
+
+/* NAMES */
+.names {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.3rem;
+    color: var(--gold);
+    margin: 20px 0 40px;
+}
+
+/* IMAGE */
+.image-placeholder {
+    margin: 35px 0;
+}
+
+.image-placeholder img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* DATE BOX */
+.timer-box {
+    border: 1px solid rgba(212,175,55,0.4);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    background: rgba(255,255,255,0.03);
+}
+
+.date-text {
+    font-size: 1.8rem;
+    margin: 5px 0;
+}
+
+/* COUNTDOWN */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.countdown-item {
+    border: 1px solid rgba(212,175,55,0.3);
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 60px;
+}
+
+/* VENUE BOX */
+.venue-section {
+    border: 1px solid rgba(212,175,55,0.4);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.03);
+}
+
+.venue-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+/* MAP */
+.map-container {
+    margin-top: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* MOMENTS TITLE */
+.moments-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--gold);
+    margin: 60px 0 25px;
+}
+
+/* IMAGE TEXT */
+.image-text {
+    margin-top: 10px;
+    font-size: 1.7rem;
+    font-family: 'Great Vibes', cursive;
+    color: var(--mgold);
+}
+
+/* VIDEO */
+#weddingVideo {
+    width: 90%;
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* CLOSING */
+.closing {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin-top: 60px;
+    line-height: 1.5;
+}
+
+/* SPARKLE */
+.sparkle {
+    position: fixed;
+    background: radial-gradient(circle, #fff700 0%, rgba(212,175,55,0) 85%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+} 
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="main-title">Wedding Invitation</h1>
+
+        <div class="message">
+            With joyful hearts, we request the honor of your presence to celebrate the union of
+        </div>
+
+        <div class="names">
+            CHETANA<br>
+            <span style="font-size: 1.8rem; font-family: 'Great Vibes';">&</span><br>
+            MITHUN 
+        </div>
+
+        <div class="image-placeholder">
+            <img src="IMG_20260423_123556.png" alt="Wedding Couple Decoration">
+        </div>
+
+ <div class="date-section">
+<div class="timer-box">
+            <div class="date-text">DATE</div>
+            <div class="date-text" style="color: var(--deep-berry);">May 8, 2026</div>
+            <div id="countdown">
+                <div class="countdown-item"><span class="count-num" id="days">00</span><span class="count-label">Days</span></div>
+                <div class="countdown-item"><span class="count-num" id="hours">00</span><span class="count-label">Hrs</span></div>
+                <div class="countdown-item"><span class="count-num" id="minutes">00</span><span class="count-label">Min</span></div>
+                <div class="countdown-item"><span class="count-num" id="seconds">00</span><span class="count-label">Sec</span></div>
+            </div>
+        </div>
+
+        <div class="venue-section">
+            <div class="venue-title">VENUE</div>
+            <p style="font-size: 20px;">
+    Dhatri Mangal Bhavan Navanagar<br>
+    Bagalkot
+</p>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps?q=16.1485,75.6513&z=15&output=embed" 
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+                <p style="margin-top: 15px;">
+                    <a href="https://share.google/uvanU2hwirVMYupCP" target="_blank" style="color: var(--deep-berry); font-weight: bold; text-decoration: none;">
+                      👉 Get Directions to the Celebration.
+
+                    </a>
+                </p>
+            </div>
+        </div> <div class="date-text">
+    <h2 class="moments-title">MOMENTS OF LOVE💫</h2>
+</div>
+        <div class="image-placeholder">
+            <img src="B.jpg" alt="Wedding Couple Decoration"> 
+<p class="image-text">“Where the ocean melts into the shore,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;something in us feels the same.”</p>
+        </div>
+        
+<div class="image-placeholder">
+            <img src="c.jpg" alt="Wedding Couple Decoration"> 
+<p class="image-text">"Every look tells a story..<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we’re just beginning to write."</p>
+        </div>
+        <div class="image-placeholder">
+            <img src="D.png" alt="Wedding Couple Decoration">
+<p class="image-text">"A dreamlit sky and candlelight glow—a single rose, a shared glance, and a moment frozen in time."</p>
+        </div>
+        <div class="image-placeholder">
+            <img src="A.jpg" alt="Wedding Couple Decoration">
+<p class="image-text">"He watched, she walked··<br>
+  &nbsp;&nbsp;&nbsp;
+and in that moment,their forever began."</p>
+        </div>
+<!-- Wedding Video -->
+<div class="video-section">
+    <video id="weddingVideo" autoplay muted loop controls>
+        <source src="v.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+        <div class="closing">
+            “Your presence will be the greatest blessing as we begin our journey of love, togetherness, and lifelong companionship.”
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer Logic
+        const targetDate = new Date("May 8, 2026 12:27:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = d < 10 ? "0"+d : d;
+            document.getElementById("hours").innerText = h < 10 ? "0"+h : h;
+            document.getElementById("minutes").innerText = m < 10 ? "0"+m : m;
+            document.getElementById("seconds").innerText = s < 10 ? "0"+s : s;
+        }
+        setInterval(updateCountdown, 1000);
+
+        // Golden Sparkle Animation Logic
+        function createSparkle() {
+            const sparkle = document.createElement("div");
+            sparkle.classList.add("sparkle");
+            
+            const size = Math.random() * 5 + 2 + "px";
+            sparkle.style.width = size;
+            sparkle.style.height = size;
+            
+            sparkle.style.left = Math.random() * 100 + "vw";
+            sparkle.style.top = "-10px";
+            
+            const duration = Math.random() * 3 + 2;
+            sparkle.style.animationDuration = duration + "s";
+            sparkle.style.opacity = Math.random();
+
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => {
+                sparkle.remove();
+            }, duration * 1000);
+        }
+
+        setInterval(createSparkle, 150);
+    </script>
+</body>
+</html>
